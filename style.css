@@ -2438,3 +2438,55 @@ left:-8px;
 .footer p{
     margin:0;
 }
+
+
+
+
+
+
+#music-btn{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:var(--lila-fuerte);
+
+    color:white;
+
+    font-size:24px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+        0 10px 25px rgba(109,26,54,.35);
+
+    z-index:99999;
+
+    transition:.3s;
+
+}
+
+#music-btn:hover{
+
+    transform:scale(1.1);
+
+    background:var(--lila-fuerte);
+
+}
