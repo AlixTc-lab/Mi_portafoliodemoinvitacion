@@ -40,21 +40,18 @@ html{
 
 }
 
-body{
-
-    font-family:"Poppins",sans-serif;
-
-    background:linear-gradient(
-        180deg,
-        #FFF8FC 0%,
-        #F9F3FF 50%,
-        #FFF8FC 100%
-    );
-
-    color:var(--gris);
-
-    overflow-x:hidden;
-
+body {
+    font-family: "Poppins", sans-serif;
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
+    background-image: url("fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin: 0;
 }
 
 /*======================================================
@@ -74,28 +71,14 @@ body{
 
     overflow:hidden;
 
-    background-image:url("hero2.png");
+    background-image:url("hero.png");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
 
 }
 
-.overlay{
 
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
-        rgba(255,245,251,.30),
-        rgba(245,235,255,.55),
-        rgba(255,255,255,.70)
-    );
-
-    backdrop-filter:blur(1px);
-
-}
 
 .hero-content{
 
@@ -205,7 +188,7 @@ body{
 
 .subtitulo{
 
-    color:var(--rosa-fuerte);
+    color:var(--blanco);
 
     text-transform:uppercase;
 
@@ -225,7 +208,8 @@ body{
 
     font-family:"Cormorant Garamond",serif;
 
-    color:var(--titulo);
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -235,7 +219,8 @@ body{
 
     margin:0 auto 55px;
 
-    color:var(--gris);
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -251,7 +236,7 @@ body{
 
 .tiempo{
 
-    background:rgba(255,255,255,.65);
+    background:url("hero3.jpg") no-repeat center center/cover;
 
     backdrop-filter:blur(15px);
 
@@ -281,7 +266,8 @@ body{
 
     font-weight:700;
 
-    color:var(--lila-fuerte);
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
     line-height:1;
 
@@ -299,8 +285,8 @@ body{
 
     font-size:13px;
 
-    color:var(--rosa-fuerte);
-
+  color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 }
 
 /*======================================================
@@ -426,107 +412,86 @@ body{
 GALERÍA
 ======================================================*/
 
-
-.galeria{
-
-    padding:120px 20px;
-
+.galeria {
+    padding: 120px 20px;
+    position: relative;
+    z-index: 1;
 }
 
 
-.titulo-seccion{
-
-    max-width:700px;
-
-    margin:auto;
-
-    text-align:center;
-
-    margin-bottom:60px;
-
+.titulo-seccion {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
 }
 
 
-.titulo-seccion span{
-
-    color:var(--rosa-fuerte);
-
-    text-transform:uppercase;
-
-    letter-spacing:5px;
-
-    font-size:13px;
-
-    font-weight:600;
-
+.titulo-seccion span {
+    color: var(--blanco);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 
-.titulo-seccion h2{
-
+.titulo-seccion h2 {
     margin-top:15px;
-
-    font-family:"Cormorant Garamond",serif;
-
+    font-family:"Cormorant Garamond", serif;
     font-size:55px;
-
-    color:var(--titulo);
-
+    color:var(--blanco);
+   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
+    
 }
 
 
-.titulo-seccion p{
-
+.titulo-seccion p {
     margin-top:20px;
-
-    color:var(--gris);
-
+    color:var(--blanco-estelar);
+    opacity:.8;
 }
 
 
 
-/* GRID */
+/*======================================================
+CARRUSEL GALERÍA
+======================================================*/
 
-.galeria-grid{
 
+.miGaleria{
 
+    width:100%;
     max-width:1100px;
-
     margin:auto;
 
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:25px;
-
+    padding-bottom:70px;
 
 }
 
 
+.swiper-wrapper{
 
-.foto{
+    align-items:center;
+
+}
 
 
-    height:350px;
+.swiper-slide{
 
-    overflow:hidden;
+    height:520px;
 
     border-radius:30px;
 
-    background:white;
+    overflow:hidden;
 
-    box-shadow:var(--shadow);
+    background:#0b132b;
 
-    position:relative;
-
+    transition:.4s ease;
 
 }
 
 
-
-.foto img{
-
+.swiper-slide img{
 
     width:100%;
 
@@ -534,126 +499,173 @@ GALERÍA
 
     object-fit:cover;
 
-    transition:.6s;
+    display:block;
 
+}
+
+
+/* efecto suave foto central */
+
+.swiper-slide-active{
+
+    transform:scale(1.02);
 
 }
 
 
 
-.foto:hover img{
+/* puntos */
 
+.swiper-pagination-bullet{
 
-    transform:scale(1.12);
+    background:#FFD166;
 
-
-}
-
-
-
-/* fotos destacadas */
-
-.foto.grande{
-
-
-    height:450px;
-
+    opacity:.7;
 
 }
 
 
+.swiper-pagination-bullet-active{
 
-/* efecto brillo */
+    width:28px;
 
-.foto::after{
-
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
-
-        135deg,
-
-        rgba(255,255,255,.35),
-
-        transparent
-
-    );
-
-
-    opacity:0;
-
-    transition:.4s;
-
-
-}
-
-
-
-.foto:hover::after{
-
+    border-radius:10px;
 
     opacity:1;
 
-
 }
 
 
 
-/* RESPONSIVE */
+/*======================================================
+TABLET
+======================================================*/
 
 
 @media(max-width:900px){
 
+    .miGaleria{
 
-.galeria-grid{
+        max-width:95%;
+
+    }
 
 
-    grid-template-columns:repeat(2,1fr);
+    .swiper-slide{
 
+        height:420px;
+
+    }
 
 }
 
 
-}
+
+/*======================================================
+CELULAR
+======================================================*/
 
 
 @media(max-width:600px){
 
 
-.titulo-seccion h2{
+    .titulo-seccion h2{
+
+        font-size:40px;
+
+    }
 
 
-    font-size:40px;
+    .miGaleria{
+
+        max-width:100%;
+
+        padding-bottom:50px;
+
+    }
+
+
+    .swiper-slide{
+
+        height:330px;
+
+        border-radius:20px;
+
+    }
+
+
+    .swiper-slide-active{
+
+        transform:scale(1);
+
+    }
 
 
 }
 
 
-.galeria-grid{
+
+/*======================================================
+PANTALLAS GRANDES
+======================================================*/
 
 
-    grid-template-columns:1fr;
+@media(min-width:1400px){
 
+
+    .miGaleria{
+
+        max-width:1200px;
+
+    }
+
+
+    .swiper-slide{
+
+        height:560px;
+
+    }
 
 }
 
+/*======================================================
+FLECHAS DE NAVEGACIÓN SWIPER
+======================================================*/
 
-.foto,
-.foto.grande{
+.swiper-button-next,
+.swiper-button-prev {
+    color: #FFD166 !important; /* Color de la flecha (combina con tus puntos) */
+    background: rgba(11, 19, 43, 0.6); /* Fondo oscuro translúcido */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
 
+/* Cambiar tamaño del ícono interno de la flecha */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 18px;
+    font-weight: bold;
+}
 
-    height:380px;
+/* Efecto al pasar el mouse por encima */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(11, 19, 43, 0.9);
+    transform: scale(1.1);
+}
 
-
+/* Opcional: Ocultar flechas en celulares pequeños para que no estorben */
+@media(max-width: 600px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
 }
 
 
-}
 
 /*======================================================
 LUGARES
@@ -686,7 +698,7 @@ LUGARES
 
 .lugar-card{
 
-    background:rgba(255,255,255,.65);
+    background:url("hero3.jpg") no-repeat center center/cover;
 
     backdrop-filter:blur(18px);
 
@@ -794,7 +806,8 @@ LUGARES
 
     font-size:38px;
 
-    color:var(--titulo);
+   color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -804,7 +817,8 @@ LUGARES
 
     line-height:1.8;
 
-    color:var(--gris);
+   color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
     margin-bottom:15px;
 
@@ -931,7 +945,7 @@ PADRES Y PADRINOS
 
     position:relative;
 
-    background:rgba(255,255,255,.65);
+    background:url("hero3.jpg") no-repeat center center/cover;
 
     backdrop-filter:blur(18px);
 
@@ -1027,7 +1041,8 @@ PADRES Y PADRINOS
 
     font-size:42px;
 
-    color:var(--titulo);
+   color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -1037,7 +1052,8 @@ PADRES Y PADRINOS
 
     font-size:20px;
 
-    color:var(--rosa-fuerte);
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -1051,7 +1067,8 @@ PADRES Y PADRINOS
 
     font-weight:500;
 
-    color:#665078;
+  color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -1061,7 +1078,8 @@ PADRES Y PADRINOS
 
     margin-top:5px;
 
-    color:var(--gris);
+   color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
     font-size:14px;
 
@@ -1179,7 +1197,7 @@ MESA DE REGALOS
 
     padding:70px 50px;
 
-    background:rgba(255,255,255,.65);
+    background:url("hero3.jpg") no-repeat center center/cover;
 
     backdrop-filter:blur(20px);
 
@@ -1245,7 +1263,9 @@ MESA DE REGALOS
 
     font-size:60px;
 
-    color:var(--titulo);
+   ;
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -1259,7 +1279,8 @@ MESA DE REGALOS
 
     line-height:1.9;
 
-    color:var(--gris);
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
     font-size:17px;
 
@@ -1383,7 +1404,7 @@ CONFIRMACION
 
 .accion-card{
 
-    background:rgba(255,255,255,.65);
+    background:url("hero3.jpg") no-repeat center center/cover;
 
     backdrop-filter:blur(20px);
 
@@ -1441,7 +1462,8 @@ CONFIRMACION
 
     font-size:35px;
 
-    color:var(--titulo);
+   color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -1450,6 +1472,8 @@ CONFIRMACION
 .accion-card p{
 
     margin-bottom:25px;
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -1466,7 +1490,7 @@ CONFIRMACION
 
     padding:45px;
 
-    background:rgba(255,255,255,.7);
+   background:url("hero3.jpg") no-repeat center center/cover;
 
     backdrop-filter:blur(20px);
 
@@ -1486,7 +1510,8 @@ CONFIRMACION
 
     font-size:40px;
 
-    color:var(--titulo);
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
     margin-bottom:30px;
 
@@ -1571,234 +1596,6 @@ CONFIRMACION
 
 
 }
-/*======================================================
-PETALOS ACUARELA ROSA / LILA
-======================================================*/
-
-
-.petalos{
-
-    position:fixed;
-
-    inset:0;
-
-    overflow:hidden;
-
-    pointer-events:none;
-
-    z-index:15;
-
-}
-
-
-
-/* Forma del pétalo */
-
-.petalos span{
-
-    position:absolute;
-
-    top:-80px;
-
-    width:35px;
-
-    height:55px;
-
-    background:linear-gradient(
-
-        135deg,
-
-        rgba(248,215,230,.85),
-
-        rgba(220,204,247,.75)
-
-    );
-
-    border-radius:
-
-    80% 20% 80% 20%;
-
-    filter:blur(.2px);
-
-    opacity:.75;
-
-    animation:
-
-    caer 15s linear infinite,
-
-    girar 5s ease-in-out infinite;
-
-}
-
-
-
-/* posiciones */
-
-.petalos span:nth-child(1){
-
-    left:5%;
-
-    animation-delay:0s;
-
-    transform:scale(.8);
-
-}
-
-
-.petalos span:nth-child(2){
-
-    left:18%;
-
-    animation-delay:4s;
-
-    transform:scale(1.2);
-
-}
-
-
-.petalos span:nth-child(3){
-
-    left:35%;
-
-    animation-delay:2s;
-
-    transform:scale(.6);
-
-}
-
-
-.petalos span:nth-child(4){
-
-    left:50%;
-
-    animation-delay:7s;
-
-    transform:scale(1);
-
-}
-
-
-.petalos span:nth-child(5){
-
-    left:65%;
-
-    animation-delay:3s;
-
-    transform:scale(.8);
-
-}
-
-
-.petalos span:nth-child(6){
-
-    left:78%;
-
-    animation-delay:6s;
-
-    transform:scale(1.3);
-
-}
-
-
-.petalos span:nth-child(7){
-
-    left:90%;
-
-    animation-delay:1s;
-
-    transform:scale(.7);
-
-}
-
-
-.petalos span:nth-child(8){
-
-    left:28%;
-
-    animation-delay:8s;
-
-    transform:scale(1);
-
-}
-
-
-.petalos span:nth-child(9){
-
-    left:58%;
-
-    animation-delay:10s;
-
-    transform:scale(.9);
-
-}
-
-
-.petalos span:nth-child(10){
-
-    left:82%;
-
-    animation-delay:12s;
-
-    transform:scale(.6);
-
-}
-
-
-
-/* caída */
-
-@keyframes caer{
-
-
-0%{
-
-    top:-100px;
-
-    opacity:0;
-
-}
-
-
-10%{
-
-    opacity:.8;
-
-}
-
-
-100%{
-
-    top:110vh;
-
-    transform:translateX(80px);
-
-    opacity:0;
-
-}
-
-}
-
-
-
-/* movimiento del pétalo */
-
-@keyframes girar{
-
-
-0%,100%{
-
-    rotate:0deg;
-
-}
-
-
-50%{
-
-    rotate:120deg;
-
-}
-
-}
 
 /*======================================================
 QR FOTOS
@@ -1827,7 +1624,7 @@ QR FOTOS
 
     padding:65px 45px;
 
-    background:rgba(255,255,255,.7);
+    background:url("hero3.jpg") no-repeat center center/cover;
 
     backdrop-filter:blur(20px);
 
@@ -1879,7 +1676,8 @@ QR FOTOS
 
     margin-top:35px;
 
-    color:var(--rosa-fuerte);
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
     text-transform:uppercase;
 
@@ -1901,7 +1699,8 @@ QR FOTOS
 
     font-size:55px;
 
-    color:var(--titulo);
+  color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -1915,7 +1714,8 @@ QR FOTOS
 
     line-height:1.9;
 
-    color:var(--gris);
+   color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -2014,17 +1814,7 @@ CIERRE FINAL
 
     align-items:center;
 
-    background:
 
-    linear-gradient(
-
-        135deg,
-
-        #FFF1F7,
-
-        #F4F0FF
-
-    );
 
 }
 
@@ -2040,7 +1830,7 @@ CIERRE FINAL
 
     padding:70px 50px;
 
-    background:rgba(255,255,255,.65);
+    background:url("hero3.jpg") no-repeat center center/cover;
 
     backdrop-filter:blur(20px);
 
@@ -2102,7 +1892,8 @@ CIERRE FINAL
 
     font-size:13px;
 
-    color:var(--rosa-fuerte);
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -2116,7 +1907,8 @@ CIERRE FINAL
 
     font-size:65px;
 
-    color:var(--titulo);
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -2130,7 +1922,8 @@ CIERRE FINAL
 
     font-weight:400;
 
-    color:#9B72C7;
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -2146,7 +1939,8 @@ CIERRE FINAL
 
     line-height:2;
 
-    color:var(--gris);
+    color:var(--blanco);
+     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -2175,6 +1969,7 @@ CIERRE FINAL
     color:#72568F;
 
     letter-spacing:3px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -2284,9 +2079,9 @@ CIERRE FINAL
 
     padding:70px 50px;
 
-    background:rgba(255,255,255,.65);
+     background:url("hero3.jpg") no-repeat center center/cover;
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(90px);
 
     border-radius:45px;
 
@@ -2357,7 +2152,8 @@ left:-8px;
 .itinerario h2{
 
     font-size:55px;
-    color:#72568F;
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -2365,7 +2161,8 @@ left:-8px;
 .itinerario-card h3{
 
     font-size:30px;
-    color:#72568F;
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 
 }
 
@@ -2373,8 +2170,8 @@ left:-8px;
 .itinerario-card p{
 
     font-size:15px;
-    color:#72568F;
-
+    color:var(--blanco);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(11, 19, 43, 0.9);
 }
 
 
@@ -2489,4 +2286,81 @@ left:-8px;
 
     background:var(--lila-fuerte);
 
+}
+
+
+
+
+/* ===== LUCIÉRNAGAS (VERSIÓN SEGURA) ===== */
+.stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:9999; /* 🔥 ARRIBA DE TODO */
+}
+
+.star{
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    background:#fff;
+    border-radius:50%;
+
+    box-shadow:
+        0 0 6px #fff,
+        0 0 12px rgba(212,175,55,.9),
+        0 0 24px rgba(212,175,55,.7),
+        0 0 36px rgba(212,175,55,.4);
+
+    opacity:1; /* 🔥 IMPORTANTE */
+
+    animation: floatStar linear infinite;
+}
+
+/* movimiento */
+@keyframes floatStar{
+    0%{
+        transform: translateY(110vh);
+    }
+    100%{
+        transform: translateY(-120vh);
+    }
+}
+
+
+
+.seccion-imagen {
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+    box-sizing: border-box;
+}
+
+.seccion-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+    .seccion-imagen {
+        width: 96%;
+        margin: 25px auto;
+    }
+
+    .seccion-imagen img {
+        border-radius: 20px;
+    }
+}
+
+/* VIDEOS */
+video {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
 }

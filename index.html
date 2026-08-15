@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>XV Años | Daniela</title>
+<title>XV Años | Julieta</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,10 +12,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 </head>
 
 <body>
-
+ <div class="stars"></div>
     <!-- Música -->
 <audio id="bg-music" loop>
     <source src="amor.mp3" type="audio/mpeg">
@@ -24,24 +29,6 @@
 <button id="music-btn">
     🎵
 </button>
-<!--======================================================
-PETALOS ACUARELA
-======================================================-->
-
-<div class="petalos">
-
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-
-</div>
 
 
 <!--======================================================
@@ -50,23 +37,7 @@ HERO
 
 <section class="hero">
 
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-
-        <span class="detalle">
-            Mis XV Años
-        </span>
-
-        <h1>Daniela</h1>
-
-        <div class="linea"></div>
-
-        <p>
-            15 de Mayo de 2027
-        </p>
-
-    </div>
+   
 
 </section>
 
@@ -132,6 +103,13 @@ Colocar debajo del HERO
 </section>
 
 
+
+
+
+<video width="80%" autoplay muted loop playsinline>
+  <source src="VI.mp4" type="video/mp4">
+</video>
+
 <!--======================================================
 GALERÍA DE FOTOS
 ======================================================-->
@@ -148,60 +126,47 @@ GALERÍA DE FOTOS
             Momentos Especiales
         </h2>
 
-        <p>
+        <span>
             Una pequeña colección de momentos que forman parte de mi historia.
-        </p>
+        </span>
 
     </div>
 
 
-    <div class="galeria-grid">
+ <div class="swiper miGaleria">
 
+        <div class="swiper-wrapper">
 
-        <div class="foto">
+            <div class="swiper-slide">
+                <img src="f1.jpg">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="f2.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="f3.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="f4.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="f5.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="f6.jpg">
+            </div>
 
           
-            <img src="foto1.jpeg" alt="Foto">
 
         </div>
 
+        <!-- Paginación (puntos) -->
+    <div class="swiper-pagination"></div>
 
-        <div class="foto grande">
-
-             <img src="foto2.jpg" alt="Foto">
-
-        </div>
-
-
-        <div class="foto">
-
-            <img src="foto3.jpg" alt="Foto">
-
-        </div>
-
-
-        <div class="foto">
-
-            <img src="foto4.jpg" alt="Foto">
-
-        </div>
-
-
-        <div class="foto grande">
-
-            <img src="foto5.jpg" alt="Foto">
-
-        </div>
-
-
-        <div class="foto">
-
-            <img src="foto6.jpg" alt="Foto">
-
-        </div>
-
-
-    </div>
+    <!-- Flechas de navegación (¡Asegúrate de agregarlas!) -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 
 
 </section>
@@ -225,9 +190,10 @@ itinerario de
             Itinerario del evento
         </h2>
 
-        <p>
+        <span>
+            Un día lleno de momentos especiales donde       
           compartiremos un día inolvidable.
-        </p>
+        </span>
 
     </div>
 
@@ -236,7 +202,7 @@ itinerario de
 <div class="t-item left">
 <div class="circle"></div>
 <div class="box">
-<h3>⛪ Ceremonia</h3>
+<h3> Ceremonia</h3>
 <p>5:00 PM — Inicio de la ceremonia religiosa</p>
 </div>
 </div>
@@ -244,7 +210,7 @@ itinerario de
 <div class="t-item right">
 <div class="circle"></div>
 <div class="box">
-<h3>📸 Sesión de fotos</h3>
+<h3> Sesión de fotos</h3>
 <p>6:00 PM — Fotografías con familia y amigos</p>
 </div>
 </div>
@@ -252,7 +218,7 @@ itinerario de
 <div class="t-item left">
 <div class="circle"></div>
 <div class="box">
-<h3>🍸 Recepción</h3>
+<h3> Recepción</h3>
 <p>7:00 PM — Coctel de bienvenida</p>
 </div>
 </div>
@@ -260,7 +226,7 @@ itinerario de
 <div class="t-item right">
 <div class="circle"></div>
 <div class="box">
-<h3>💃 Fiesta</h3>
+<h3> Fiesta</h3>
 <p>8:00 PM — Inicio de la celebración</p>
 </div>
 </div>
@@ -296,9 +262,9 @@ LUGAR DEL EVENTO
             Ceremonia & Recepción
         </h2>
 
-        <p>
+        <span>
             Dos lugares especiales donde compartiremos este día inolvidable.
-        </p>
+        <span>
 
     </div>
 
@@ -322,9 +288,7 @@ LUGAR DEL EVENTO
             <div class="info-lugar">
 
 
-                <span class="icono">
-                    ⛪
-                </span>
+
 
 
                 <h3>
@@ -380,9 +344,6 @@ LUGAR DEL EVENTO
             <div class="info-lugar">
 
 
-                <span class="icono">
-                    ✨
-                </span>
 
 
                 <h3>
@@ -459,9 +420,7 @@ PADRES Y PADRINOS
         <div class="familia-card">
 
 
-            <div class="decoracion">
-                ♡
-            </div>
+          
 
 
             <h3>
@@ -471,9 +430,7 @@ PADRES Y PADRINOS
 
             <div class="persona">
 
-                <span>
-                    ✨
-                </span>
+              
 
                 <h4>
                     María López
@@ -491,9 +448,7 @@ PADRES Y PADRINOS
 
             <div class="persona">
 
-                <span>
-                    ✨
-                </span>
+               
 
                 <h4>
                     Carlos Hernández
@@ -517,10 +472,7 @@ PADRES Y PADRINOS
         <div class="familia-card">
 
 
-            <div class="decoracion">
-                ♡
-            </div>
-
+        
 
             <h3>
                 Mis Padrinos
@@ -529,9 +481,7 @@ PADRES Y PADRINOS
 
             <div class="persona">
 
-                <span>
-                    ✨
-                </span>
+               
 
                 <h4>
                     Andrea Martínez
@@ -549,9 +499,7 @@ PADRES Y PADRINOS
 
             <div class="persona">
 
-                <span>
-                    ✨
-                </span>
+            
 
                 <h4>
                     Roberto García
@@ -585,11 +533,7 @@ MESA DE REGALOS
     <div class="regalos-card">
 
 
-        <div class="regalo-icono">
-
-            🎁
-
-        </div>
+    
 
 
         <span class="subtitulo">
@@ -654,9 +598,9 @@ CALENDARIO Y CONFIRMACIÓN
             Confirma tu asistencia
         </h2>
 
-        <p>
+        <span>
             Ayúdame a organizar este día tan especial confirmando tu presencia.
-        </p>
+        </span>
 
     </div>
 
@@ -669,9 +613,6 @@ CALENDARIO Y CONFIRMACIÓN
 
         <div class="accion-card">
 
-            <div class="accion-icono">
-                📅
-            </div>
 
 
             <h3>
@@ -706,9 +647,7 @@ CALENDARIO Y CONFIRMACIÓN
         <div class="accion-card">
 
 
-            <div class="accion-icono">
-                💌
-            </div>
+        
 
 
             <h3>
@@ -818,11 +757,7 @@ QR PARA FOTOS
     <div class="qr-card">
 
 
-        <div class="qr-icono">
-
-            📸
-
-        </div>
+       
 
 
         <span>
@@ -893,11 +828,6 @@ CIERRE FINAL
     <div class="cierre-card">
 
 
-        <div class="flor">
-
-            ✿
-
-        </div>
 
 
         <span>
@@ -916,7 +846,7 @@ CIERRE FINAL
 
         <h3>
 
-            Daniela
+            Julieta
 
         </h3>
 
@@ -953,7 +883,11 @@ CIERRE FINAL
 
 </section>
 
+<section class="seccion-imagen">
+    <img src="DC.png" alt="Descripción de la imagen">
+</section>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 
 <footer class="footer">
